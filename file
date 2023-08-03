@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python Request Example</title>
+</head>
+<body>
+	<h1>Python Request Example</h1>
+	<p id="response"></p>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "https://replit.com/@NoahHix/PreviousRelievedProtools#main.py", true);
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				document.getElementById("response").innerHTML = xhr.responseText;
+			}
+		};
+		xhr.send();
+	</script>
+</body>
+</html>
