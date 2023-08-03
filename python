@@ -1,0 +1,7 @@
+import requests
+x=input()
+y=input()
+payload={"username": x, "password" : y}
+r= requests.post('https://httpbin.org/post', data = payload)
+r = r.json()
+print(r)
